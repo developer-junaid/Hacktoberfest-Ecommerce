@@ -16,6 +16,7 @@ body {
 
 .header {
   padding: 1rem;
+  position: relative;
   width: 100%;
 }
 
@@ -34,6 +35,74 @@ body {
 .header__nav .hamburger-icon {
   width: 30px;
   cursor: pointer;
+  background-color: #fff;
+}
+
+.sidebar {
+  width: 0;
+  height: 100%;
+  background: #000;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  /* display: none; */
+}
+
+.sidebar ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar ul li {
+  list-style: none;
+  padding: 2rem;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li a .icons {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 1rem 0 3rem;
+}
+
+.sidebar ul li:hover {
+  background-color: #232324;
+}
+
+.sidebar ul li:hover a {
+  color: #fff;
+}
+
+.close {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 100%;
+  position: absolute;
+  top: 1.5rem;
+  right: 0.5rem;
+  display: none;
+}
+
+.close i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
 }
 
 .hero {
